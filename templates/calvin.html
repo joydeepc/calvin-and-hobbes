@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+ {% for cal in cal_all %}
+ {% if forloop.counter == 1 %}
+  <div class="item active">
+  {% else %}
+  <div class="item">
+  {% endif %}
+    <img src="{{ cal.cnhImgUrl }}" style="width:100%;" alt="{{ cal.cnhImg }}">
+    <div class="carousel-caption capt">
+        <h3>{{ cal.title }}</h3>
+    </div>
+  </div>
+ {% endfor %}
+{% endblock content %}
